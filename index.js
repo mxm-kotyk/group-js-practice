@@ -42,16 +42,49 @@
 //3. Напишіть цикл, який виводить в консоль
 //числа от max до min по убыванию
 // 3.1. Cкладіть усі парні числа от min до max
-const max = 50;
-const min = 23;
-let total = 0;
+// const max = 50;
+// const min = 23;
+// let total = 0;
 
-for (let i = max; i >= min; i -= 1) {
-    console.log(i);
-    if(i % 2 === 0) {
-        total += i;
+// for (let i = max; i >= min; i -= 1) {
+//     console.log(i);
+//     if(i % 2 === 0) {
+//         total += i;
+//     }
+//   }
+
+//   console.log("Total", total);
+
+
+
+//5. Напишіть код, який буде питати
+//логін за допомогою prompt и логіровати результат
+//в консоль браузера
+
+//Якщо користувач вводить "Адмін",
+//то prompt запрашує пароль.
+//Якщо ничого не ввели чи нажата клавіша Esc
+//вивести строку "Скасовано"
+//В противному випадку вивести рядок "Я вас не знаю"
+
+//Пароль перевіряти так:
+//Якщо введен пароль "Я головний",
+//то вивести рядок "Вітаю!"
+//в іншому випадку виводити рядок "Невірний пароль!"
+
+const loginInput = prompt("Введіть свій логін");
+
+console.log(loginInput);
+
+if (loginInput === "Адмін") {
+    const passwordInput =  prompt("Введіть свій пароль");
+    if (passwordInput === "Я головний") {
+        console.log("Вітаю!");
+    } else {
+        console.log("Невірний пароль")
     }
-  }
-
-  console.log("Total", total);
-
+} else if (loginInput === null || loginInput === "") {
+    console.log("Скасовано");
+} else {
+    console.log("Я вас не знаю");
+}
