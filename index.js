@@ -121,18 +121,44 @@
 //         break;
 // }
 
-const loginInput = prompt("Введіть свій логін");
-console.log(loginInput);
-switch (loginInput) {
-    case "Адмін":
-        const passwordInput =  prompt("Введіть свій пароль");
-        console.log(passwordInput === "Я головний" ? "Вітаю!" : "Невірний пароль")
+// const loginInput = prompt("Введіть свій логін");
+// console.log(loginInput);
+// switch (loginInput) {
+//     case "Адмін":
+//         const passwordInput =  prompt("Введіть свій пароль");
+//         console.log(passwordInput === "Я головний" ? "Вітаю!" : "Невірний пароль")
        
-        break;
-        case null:
-        case "" :  console.log("Скасовано");
-            break;
-    default:
-        console.log("Я вас не знаю");
-        break;
+//         break;
+//         case null:
+//         case "" :  console.log("Скасовано");
+//             break;
+//     default:
+//         console.log("Я вас не знаю");
+//         break;
+// }
+
+// 6. При завантаженні сторінки користувачу пропонується
+//в prompt ввести число. Ввод додається к значенню
+//змінної total.
+//Операція вводу числа продовжується до тих пір,
+//доки користувач не натисне кнопку Cancel в prompt.
+//Після того як користувач закінчив ввод натиснувши на
+//кнопку Cancel, показати alert з рядком "Загальна сумма введенних чисел дорівнює [число]."
+//Робити перевірку,що користувач ввів саме число,
+//а не довільний набір символів, не потрібно.
+
+let numberInput = prompt("Введіть число");
+
+let total = 0;
+
+// while (numberInput) {
+//     total += Number(numberInput);
+//     numberInput = prompt("Введіть число");
+// }
+// alert(`Загальна сумма введенних чисел дорівнює ${total}.`)
+
+if (numberInput) {
+    total += Number(numberInput);
+    numberInput = prompt("Введіть число");
 }
+alert(`Загальна сумма введенних чисел дорівнює ${total}.`)
