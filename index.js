@@ -55,7 +55,20 @@
 
 //   console.log("Total", total);
 
+// const max = 50;
+// const min = 23;
+// let total = 0;
 
+// for (let i = max; i >= min; i -= 1) {
+//     console.log(i);
+//     if(i % 2 !== 0) {
+//         continue;
+        
+//     }
+//     total += i;
+//   }
+
+//   console.log("Total", total);
 
 //5. Напишіть код, який буде питати
 //логін за допомогою prompt и логіровати результат
@@ -72,19 +85,54 @@
 //то вивести рядок "Вітаю!"
 //в іншому випадку виводити рядок "Невірний пароль!"
 
+// const loginInput = prompt("Введіть свій логін");
+
+// console.log(loginInput);
+
+// if (loginInput === "Адмін") {
+//     const passwordInput =  prompt("Введіть свій пароль");
+//     if (passwordInput === "Я головний") {
+//         console.log("Вітаю!");
+//     } else {
+//         console.log("Невірний пароль")
+//     }
+// } else if (loginInput === null || loginInput === "") {
+//     console.log("Скасовано");
+// } else {
+//     console.log("Я вас не знаю");
+// }
+
+// const loginInput = prompt("Введіть свій логін");
+// console.log(loginInput);
+// switch (loginInput) {
+//     case "Адмін":
+//         const passwordInput =  prompt("Введіть свій пароль");
+//         if (passwordInput === "Я головний") {
+//             console.log("Вітаю!");
+//         } else {
+//             console.log("Невірний пароль")
+//         }
+//         break;
+//         case null:
+//         case "" :  console.log("Скасовано");
+//             break;
+//     default:
+//         console.log("Я вас не знаю");
+//         break;
+// }
+
 const loginInput = prompt("Введіть свій логін");
-
 console.log(loginInput);
-
-if (loginInput === "Адмін") {
-    const passwordInput =  prompt("Введіть свій пароль");
-    if (passwordInput === "Я головний") {
-        console.log("Вітаю!");
-    } else {
-        console.log("Невірний пароль")
-    }
-} else if (loginInput === null || loginInput === "") {
-    console.log("Скасовано");
-} else {
-    console.log("Я вас не знаю");
+switch (loginInput) {
+    case "Адмін":
+        const passwordInput =  prompt("Введіть свій пароль");
+        console.log(passwordInput === "Я головний" ? "Вітаю!" : "Невірний пароль")
+       
+        break;
+        case null:
+        case "" :  console.log("Скасовано");
+            break;
+    default:
+        console.log("Я вас не знаю");
+        break;
 }
