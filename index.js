@@ -147,18 +147,55 @@
 //Робити перевірку,що користувач ввів саме число,
 //а не довільний набір символів, не потрібно.
 
-let numberInput = prompt("Введіть число");
+// let numberInput = prompt("Введіть число");
 
-let total = 0;
+// let total = 0;
 
-// while (numberInput) {
+// // while (numberInput) {
+// //     total += Number(numberInput);
+// //     numberInput = prompt("Введіть число");
+// // }
+// // alert(`Загальна сумма введенних чисел дорівнює ${total}.`)
+
+// if (numberInput) {
 //     total += Number(numberInput);
 //     numberInput = prompt("Введіть число");
 // }
 // alert(`Загальна сумма введенних чисел дорівнює ${total}.`)
 
-if (numberInput) {
-    total += Number(numberInput);
-    numberInput = prompt("Введіть число");
-}
-alert(`Загальна сумма введенних чисел дорівнює ${total}.`)
+
+
+// let numberInput = prompt("Введіть число");
+// let total;
+
+// numberInput = Number(numberInput);
+// while (numberInput) {
+//     console.log(typeof numberInput === 'string');
+//     // numberInput = Number(numberInput);
+//     if (typeof numberInput === 'string') {
+//         numberInput = 0;
+//     }
+
+//     total += numberInput;
+//     numberInput = prompt("Введіть число");
+// }
+
+// alert(total);
+
+
+// /7. Напишіть цикл, який пропонує ввести
+//число більше 100 через prompt.
+//Якщо користувач ввів інше число - попросити
+//ввести ще раз и так далі.
+//Цикл повинен питати число, доки користувач не
+//введе число більше 100, чи не натисне кнопку
+//Cancel в prompt
+
+let inputValue = prompt("введіть число більше 100");
+
+while (inputValue < 100)  {
+    inputValue = prompt("Enter other number: ");
+
+} 
+
+console.log(inputValue);
