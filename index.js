@@ -191,11 +191,31 @@
 //введе число більше 100, чи не натисне кнопку
 //Cancel в prompt
 
-let inputValue = prompt("введіть число більше 100");
+// let inputValue = prompt("введіть число більше 100");
 
-while (inputValue < 100)  {
-    inputValue = prompt("Enter other number: ");
+// while (inputValue < 100)  {
+//     inputValue = prompt("Enter other number: ");
 
-} 
+// } 
 
-console.log(inputValue);
+// console.log(inputValue);
+
+
+
+
+
+
+
+// 8. В змінній min є число від 0 до 59.
+// Визначте до якої чверті години входить
+// це число(в першу, другу, треттю чи четверту).
+
+// const minuteValue = Math.random() * (59 - 0) + 0;
+
+
+
+//9. Є рядок, який складається із символів, наприклад, 'abcde'.
+// Перевірте, що першим символом цього рядка є літера 'a'.
+// Якщо це так - виведіть 'Так', в іншому випадку - 'Ні'.
+
+// const message = "ahgkdkd";
