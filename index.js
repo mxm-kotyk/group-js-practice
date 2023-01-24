@@ -251,4 +251,23 @@
 // Перевірте, що першим символом цього рядка є літера 'a'.
 // Якщо це так - виведіть 'Так', в іншому випадку - 'Ні'.
 
-// const message = "ahgkdkd";
+
+// todo option -1 if else 
+// const message = "abcdefghijk";
+
+// if (message[0] === 'a') {
+//     console.log(message[0], "- Yes!");
+// }  else {
+//         console.log(' - No');
+        
+//     }
+
+// todo option - 2 startsWith
+
+// let message = 'abcdefghijk';
+// console.log(message.startsWith('a') ? 'Yes' : 'No');
+
+// todo option - 3 ternary 
+const message = "abcdefghijk";
+// console.log(message[0] === 'a' ? 'Yes' : 'No');
+
