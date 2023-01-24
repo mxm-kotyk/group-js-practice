@@ -212,6 +212,39 @@
 
 // const minuteValue = Math.random() * (59 - 0) + 0;
 
+// todo option -1 IF ELSE 
+
+// const minuteValue = Math.floor(Math.random() * (59 - 0) + 0);
+
+// if (minuteValue < 15) {
+//   console.log(minuteValue, "is the first quarter");
+// } else if (minuteValue < 30) {
+//   console.log(minuteValue, "is the second quarter");
+// } else if (minuteValue < 45) {
+//   console.log(minuteValue, "is the third quarter");
+// } else {
+//   console.log(minuteValue, "is the fourth quarter");
+// }
+
+// todo option -2 SWITCH
+
+// const minuteValue = Math.floor(Math.random() * (59 - 0) + 0);
+
+//  switch (Math.floor(minuteValue/15)) {
+//     case 0:
+//         console.log(minuteValue, "is the first quarter");
+//         break;
+//     case 1:
+//         console.log(minuteValue, "is the second quarter");
+//         break;
+//     case 2:
+//         console.log(minuteValue, "is the third quarter");
+//         break;
+//     case 3:
+//         console.log(minuteValue, "is the fourth quarter");
+//         break;
+// }
+
 
 
 //9. Є рядок, який складається із символів, наприклад, 'abcde'.
