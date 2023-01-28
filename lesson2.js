@@ -38,19 +38,46 @@
 //4 виводить зміст об'єкта users у форматі
 //ключ:значення використовуя Object.keys() та for...of
 
-const user = {
-  name: "John",
-  age: 20,
-  hobby: "tenis",
-  premium: true,
-};
+// const user = {
+//   name: "John",
+//   age: 20,
+//   hobby: "tenis",
+//   premium: true,
+// };
 
-user.mood = "happy";
-user.hobby = "skydiving";
-user.premium = false;
+// user.mood = "happy";
+// user.hobby = "skydiving";
+// user.premium = false;
 
-const keys = Object.keys(user);
+// const keys = Object.keys(user);
 
-for (const key of keys) {
-  console.log(`${key}: ${user[key]}`)
-}
+// for (const key of keys) {
+//   console.log(`${key}: ${user[key]}`)
+// }
+
+//4. Напишіть ф-цію calcTotalPrice(stones, stonesName),
+//яка приймає массив об'єктів і
+//рядок з назвою каміння.
+//Функція рахує і повертає загальну вартість каменів
+//з таким ім'ям, ціною та кількістю з об'єкта
+
+// const stones = [
+//   { name: "Смарагд", price: 1300, quantity: 4 },
+//   { name: "Смарагд", price: 1500, quantity: 3 },
+//   { name: "Діамант", price: 2700, quantity: 6 },
+//   { name: "Сапфір", price: 400, quantity: 7 },
+//   { name: "Щебінь", price: 150, quantity: 100 },
+// ];
+
+// function calcTotalPrice(stones, stonesName) {
+//   let totalPrice = 0;
+//   for (let stone of stones) {
+//     console.log(stone);
+//     if (stonesName === stone.name) {
+//       totalPrice += stone.price * stone.quantity;
+//     }
+//   }
+//   return totalPrice;
+// }
+
+// console.log(calcTotalPrice(stones, "Смарагд"));
