@@ -13,7 +13,6 @@
 //     alert("Не знаєте? ECMAScript!")
 // }
 
-
 //2. Напишіть программу, яка отримує від користувача
 //число (кількість хвилин) и виводить у консоль
 //рядок у форматі годин та хвилин
@@ -22,7 +21,7 @@
 
 // let totalMinutes = prompt('Please enter amount of time: ');
 
-// // 1. find how many hours 
+// // 1. find how many hours
 // const hoursQty = Math.floor(totalMinutes / 60);
 // const finalHours = String(hoursQty).padStart(2, "0");
 // console.log(typeof hoursQty);
@@ -36,8 +35,6 @@
 
 // const resultTime = `${finalHours}:${finalMinutes}`
 // alert(`Now is ${resultTime}`);
-
-
 
 //3. Напишіть цикл, який виводить в консоль
 //числа от max до min по убыванию
@@ -63,7 +60,7 @@
 //     console.log(i);
 //     if(i % 2 !== 0) {
 //         continue;
-        
+
 //     }
 //     total += i;
 //   }
@@ -127,7 +124,7 @@
 //     case "Адмін":
 //         const passwordInput =  prompt("Введіть свій пароль");
 //         console.log(passwordInput === "Я головний" ? "Вітаю!" : "Невірний пароль")
-       
+
 //         break;
 //         case null:
 //         case "" :  console.log("Скасовано");
@@ -163,8 +160,6 @@
 // }
 // alert(`Загальна сумма введенних чисел дорівнює ${total}.`)
 
-
-
 // let numberInput = prompt("Введіть число");
 // let total;
 
@@ -182,6 +177,18 @@
 
 // alert(total);
 
+// Вирішення з перевіркою
+
+// let numberInput = prompt("Введіть число");
+// let total = 0;
+
+// while (numberInput) {
+//   if (!Number.isNaN(total + Number(numberInput))) {
+//     total += Number(numberInput);
+//   }
+//   numberInput = prompt("Введіть число");
+// }
+// alert(`Загальна сумма введенних чисел дорівнює ${total}`);
 
 // /7. Напишіть цикл, який пропонує ввести
 //число більше 100 через prompt.
@@ -196,15 +203,9 @@
 // while (inputValue < 100)  {
 //     inputValue = prompt("Enter other number: ");
 
-// } 
+// }
 
 // console.log(inputValue);
-
-
-
-
-
-
 
 // 8. В змінній min є число від 0 до 59.
 // Визначте до якої чверті години входить
@@ -212,7 +213,7 @@
 
 // const minuteValue = Math.random() * (59 - 0) + 0;
 
-// todo option -1 IF ELSE 
+// todo option -1 IF ELSE
 
 // const minuteValue = Math.floor(Math.random() * (59 - 0) + 0);
 
@@ -245,21 +246,18 @@
 //         break;
 // }
 
-
-
 //9. Є рядок, який складається із символів, наприклад, 'abcde'.
 // Перевірте, що першим символом цього рядка є літера 'a'.
 // Якщо це так - виведіть 'Так', в іншому випадку - 'Ні'.
 
-
-// todo option -1 if else 
+// todo option -1 if else
 // const message = "abcdefghijk";
 
 // if (message[0] === 'a') {
 //     console.log(message[0], "- Yes!");
 // }  else {
 //         console.log(' - No');
-        
+
 //     }
 
 // todo option - 2 startsWith
@@ -267,7 +265,6 @@
 // let message = 'abcdefghijk';
 // console.log(message.startsWith('a') ? 'Yes' : 'No');
 
-// todo option - 3 ternary 
+// todo option - 3 ternary
 const message = "abcdefghijk";
 // console.log(message[0] === 'a' ? 'Yes' : 'No');
-
