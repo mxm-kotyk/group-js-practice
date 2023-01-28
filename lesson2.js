@@ -29,7 +29,6 @@
 // }
 // logItems(["Джаз", "Блюз", "Рок-н-ролл", "Реп", "Реггі"]);
 
-
 //3. Напиши скрипт, який для об'єкту user,
 //послідовно:
 //1 додасть поле mood зі значенням 'happy'
@@ -82,8 +81,7 @@
 
 // console.log(calcTotalPrice(stones, "Смарагд"));
 
-
-// Напишіть функцію min(a, b), яка повертає
+// 5. Напишіть функцію min(a, b), яка повертає
 // меньше з чисел a, b
 //Додати перевірку, що функція отримує числа
 
@@ -91,8 +89,6 @@
 //     if ( typeof a === "number" || typeof b === "number"  ){
 //           return Math.min(a , b) ;
 //     }
- 
-
 
 // }
 // console.log(min(9, "false"));
@@ -103,30 +99,84 @@
 //sum() повертає сумму збереженних значень (з перевіркою на наявніст властивостей в об'єкті)
 //mult() перемножає збереженні значення і повертає результат
 
-const calculator = {
-    read(a, b){
-        this.a = a;
-        this.b = b;
-    },
-    sum(){
-        if (this.a || this.b){
-            return this.a + this.b;
-        } else {
-           return 'Не має потрібних властивостей!'
-        }
-        
-    },
-    mult(){
-        if (this.a || this.b){
-            return this.a * this.b;
-        } else {
-           return 'Не має потрібних властивостей!'
-        }
-    }
-    
-}
+// const calculator = {
+//   read(a, b) {
+//     this.a = a;
+//     this.b = b;
+//   },
+//   sum() {
+//     if (this.a || this.b) {
+//       return this.a + this.b;
+//     } else {
+//       return "Не має потрібних властивостей!";
+//     }
+//   },
+//   mult() {
+//     if (this.a || this.b) {
+//       return this.a * this.b;
+//     } else {
+//       return "Не має потрібних властивостей!";
+//     }
+//   },
+// };
 
-console.log(calculator.read(12,5))
-console.log(calculator)
-console.log(calculator.sum())
-console.log(calculator.mult())
+// console.log(calculator.read(12, 5));
+// console.log(calculator);
+// console.log(calculator.sum());
+// console.log(calculator.mult());
+
+//7. Напишіть скрипт керування особистим кабінетом інтернет банка
+//Є об'єкт account в якому необхідно реалізувати
+//методи для работи з балансом та історією транзакцій
+
+//Типів транзакцій всього два.
+//Можна покласти або зняти гроші з рахунка
+const Transaction = {
+  DEPOSIT: "deposit",
+  WITHDRAW: "withdraw",
+};
+
+//Кожна транзакція це об'єкт з властивостями id, type, amount
+const account = {
+  //поточний баланс рахунка
+  balance: 0,
+
+  //Історія транзакцій
+  transactions: [],
+
+  //Метод створює і повертає об'єкт транзакцій
+  //Приймає сумму і тип транзакцій
+  createTransaction(type, amount) {
+    return {
+      type,
+      amount,
+    };
+  },
+  //Метод відповідає за додавання сумми к балансу.
+  //Приймає сумму транзакціи.
+  //Визиває createTransaction для створення об'єкта транзакціи
+  //після чого додає його в історію транзакцій
+  deposit(amount) {
+    const transactionResult = this.createTransaction(
+      Transaction.DEPOSIT,
+      amount
+    );
+    this.balance += amount;
+    console.log(transactionResult);
+    this.transactions.push({ ...transactionResult, id: 1 });
+  },
+  //Метод відповідає за зняття сумми з балансу.
+  //Приймає сумму транзакціи.
+  //Визиває createTransaction для створення об'єкта транзакціи
+  //після чого додає йогого в історю транзакцій
+  //Якщо amount більше ніж поточний баланс, виводимо повідомлення про те,
+  //що недостатньо коштів на рахунку
+  withdraw(amount) {},
+  //Метод повертає поточний баланс
+  getBalance() {},
+  //Метод шукає і повертає об'єкт транзакціи по id
+  getTransactionDetails(id) {},
+};
+
+console.log(account.deposit(2000));
+console.log(account);
