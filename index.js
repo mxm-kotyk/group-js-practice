@@ -266,5 +266,5 @@
 // console.log(message.startsWith('a') ? 'Yes' : 'No');
 
 // todo option - 3 ternary
-const message = "abcdefghijk";
+// const message = "abcdefghijk";
 // console.log(message[0] === 'a' ? 'Yes' : 'No');
