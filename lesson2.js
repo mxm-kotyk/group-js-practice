@@ -203,19 +203,15 @@ const account = {
 console.log(account.deposit(2000));
 console.log(account.deposit(5000));
 console.log(account.deposit(3000));
-console.log(account.deposit(1000));
-console.log(account.deposit(3000));
 
 console.log(account.withdraw(2000));
 console.log(account.withdraw(3000));
-console.log(account.withdraw(4000));
-console.log(account.withdraw(1000));
 console.log(account.withdraw(2000));
 console.log(account.withdraw(4000));
 
 console.log(account.getTransactionDetails("0001"));
-console.log(account.getTransactionDetails("0008"));
+console.log(account.getTransactionDetails("0006"));
 console.log(account.getTransactionDetails("0020"));
 
 console.log(account.getBalance());
-console.log(account);
+console.table(account.transactions);
