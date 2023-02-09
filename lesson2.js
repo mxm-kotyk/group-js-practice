@@ -160,7 +160,7 @@ const account = {
 		const transactionResult = this.createTransaction(Transaction.DEPOSIT, amount);
 		this.balance += amount;
 		this.transactions.push({ ...transactionResult, id: (this.transactions.length + 1).toString().padStart(4, "0") });
-		return `Transaction was successful - deposit amount: ₩${amount}. Current balance: ₩${this.balance}`;
+		return `✔️👉💳Transaction was successful - deposit amount: ₩${amount}. Current balance: ₩${this.balance}`;
 	},
 	//Метод відповідає за зняття сумми з балансу.
 	//Приймає сумму транзакціи.
@@ -170,12 +170,12 @@ const account = {
 	//що недостатньо коштів на рахунку
 	withdraw(amount) {
 		if (this.balance < amount) {
-			return `Transaction was unsuccessful - insufficient funds. Current balance: ₩${this.balance}`;
+			return `❌Transaction was unsuccessful - insufficient funds. Current balance: ₩${this.balance}`;
 		}
 		const transactionResult = this.createTransaction(Transaction.WITHDRAW, amount);
 		this.balance -= amount;
 		this.transactions.push({ ...transactionResult, id: (this.transactions.length + 1).toString().padStart(4, "0") });
-		return `Transaction was successful - withdrawal amount: ₩${amount}. Current balance: ₩${this.balance}`;
+		return `✔️👈💳Transaction was successful - withdrawal amount: ₩${amount}. Current balance: ₩${this.balance}`;
 	},
 	//Метод повертає поточний баланс
 	getBalance() {
@@ -196,7 +196,7 @@ const account = {
 				return `Transaction ID: ${transaction.id}. Transaction Type: ${transaction.type}. Transaction Amount: ₩${transaction.amount}`;
 			}
 		}
-		return `Error: transaction not found. Please enter valid transaction ID`;
+		return `❌Error: transaction not found. Please enter valid transaction ID`;
 	},
 };
 
