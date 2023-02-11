@@ -95,6 +95,13 @@ const users = [
 //     return newArray;
 // }
 
+// function getUsersWithEyeColor(users, color) {
+//      return users.filter(user => user.eyeColor === color)
+// }
+
+// Отримати масив об'єктів користувачей по кольору очей (поле eyeColor).
+// console.log(getUsersWithEyeColor(users, 'blue')); // [об'є'кт Moore Hensley, об'єкт Sharlene Bush, об'єкт Carey Barr]
+
 // // Отримати масив імен користувачів по полю (поле gender)
 // console.log(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
 
@@ -114,3 +121,16 @@ const users = [
 //   );
 // }
 // console.log(getUsersWithGender(users, "male"));
+
+// Отримати масив всіх навичок усіх користувачів (поле skills), при цьому не повинно бути
+// повторювань навичок і вони мають бути відсортовані в алфавітному порядку.
+
+function getSortedUniqueSkills(users) {
+  return users
+    .flatMap((user) => user.skills)
+    .filter((skill, index, skills) => skills.indexOf(skill) === index)
+    .sort((a, b) => a.localeCompare(b));
+}
+
+console.log(getSortedUniqueSkills(users));
+// [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
