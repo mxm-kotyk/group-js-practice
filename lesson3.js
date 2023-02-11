@@ -178,3 +178,24 @@ const users = [
 // }
 
 // makeProduct('apple', 20, showProduct);
+
+//4. Виправте помилки, щоб код працював
+// const product = {
+//   price: 5000,
+//   showPrice() {
+//     console.log(this.price);
+//   },
+// };
+// product.showPrice();
+
+const product = {
+  price: 5000,
+  showPrice() {
+    console.log(this.price);
+  },
+};
+
+function callAction(action) {
+  action();
+}
+callAction(product.showPrice.bind(product));
