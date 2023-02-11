@@ -95,10 +95,22 @@ const users = [
 //     return newArray;
 // }
 
-function getUsersWithEyeColor(users, color) {
-     return users.filter(user => user.eyeColor === color)
-}
+// // Отримати масив імен користувачів по полю (поле gender)
+// console.log(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
 
-// Отримати масив об'єктів користувачей по кольору очей (поле eyeColor).
-console.log(getUsersWithEyeColor(users, 'blue')); // [об'є'кт Moore Hensley, об'єкт Sharlene Bush, об'єкт Carey Barr]
+// function getUsersWithGender(users, gend) {
+// return users.reduce((acc, user) => {
 
+//   if (user.gender === gend) {
+//     acc.push(user.name);
+//   }
+//   return acc;
+// }, [])
+// }
+
+// function getUsersWithGender(users, gend) {
+//   return users.reduce((acc, user) =>
+//     user.gender === gend ? [...acc, user.name] : acc , []
+//   );
+// }
+// console.log(getUsersWithGender(users, "male"));
