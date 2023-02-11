@@ -188,14 +188,44 @@ const users = [
 // };
 // product.showPrice();
 
-const product = {
-  price: 5000,
-  showPrice() {
-    console.log(this.price);
-  },
-};
+// const product = {
+//   price: 5000,
+//   showPrice() {
+//     console.log(this.price);
+//   },
+// };
 
-function callAction(action) {
-  action();
-}
-callAction(product.showPrice.bind(product));
+// function callAction(action) {
+//   action();
+// }
+// callAction(product.showPrice.bind(product));
+
+// //1. Напиши класс Client який створює об'єкт
+// //із властивостями login, email
+// //Об'яви приватні властивості #login #email,
+// //доступ до яких зроби через геттер и сеттер login email
+
+// class Client {
+//   #login;
+//   #email;
+//   constructor(login, email) {
+//     this.#login = login;
+//     this.#email = email;
+//   }
+//   get login() {
+//     return this.#login;
+//   }
+//   set login(newLogin) {
+//     this.#login = newLogin;
+//   }
+//   get email() {
+//     return this.#email;
+//   }
+//   set email(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
+// const client1 = new Client('Pasha', 'Pasha.gmail.com');
+// console.log(client1);
+// client1.login = 'Masha';
+// console.log(client1);
