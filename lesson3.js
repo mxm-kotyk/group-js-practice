@@ -125,12 +125,31 @@ const users = [
 // Отримати масив всіх навичок усіх користувачів (поле skills), при цьому не повинно бути
 // повторювань навичок і вони мають бути відсортовані в алфавітному порядку.
 
-function getSortedUniqueSkills(users) {
-  return users
-    .flatMap((user) => user.skills)
-    .filter((skill, index, skills) => skills.indexOf(skill) === index)
-    .sort((a, b) => a.localeCompare(b));
-}
+// function getSortedUniqueSkills(users) {
+//   return users
+//     .flatMap((user) => user.skills)
+//     .filter((skill, index, skills) => skills.indexOf(skill) === index)
+//     .sort((a, b) => a.localeCompare(b));
+// }
 
-console.log(getSortedUniqueSkills(users));
-// [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
+// console.log(getSortedUniqueSkills(users));
+// // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
+
+// Напишіть дві функції
+// letMeSeeYourName(callback) - питає ім'я користувача
+//через prompt и викликає callback функцію
+//greet(name) - коллбек, якій приймає ім'я та логірує в консоль
+//рядок "Привіт, <name>"
+//Реалізуй перевірку, що prompt не пустий
+// якщо пустий - додай дефолтне значення
+// function letMeSeeYourName(callback) {
+//   let userName = prompt("What is your Name ?");
+//   if (!userName) {
+//     userName = 'Anonimus'
+//   }
+//   callback(userName);
+// }
+// function greet(name) {
+//   console.log(`Привіт, ${name}`);
+// }
+// letMeSeeYourName(greet);
