@@ -153,3 +153,28 @@ const users = [
 //   console.log(`Привіт, ${name}`);
 // }
 // letMeSeeYourName(greet);
+
+//2. Напишіть дві функції
+//makeProduct(name, price, callback) - приймає
+//ім'я та ціну товара, а також callback.
+//Функція створює об'єкт товара, додавая йому унікальний
+//ідентифікатор у властивість id та викликає callback
+//передавая йому створений об'єкт.
+//showProduct(product) - коллбек приймає об'єкт
+//продукта і логірує його в консоль
+
+// function makeProduct(name, price, callback) {
+//     const product = {
+//         name,
+//         price,
+//         id: Math.random().toFixed(3)
+//     }
+
+//     callback(product);
+// }
+
+// function showProduct(product) {
+//     console.log(product)
+// }
+
+// makeProduct('apple', 20, showProduct);
