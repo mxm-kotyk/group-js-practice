@@ -132,72 +132,86 @@
 //Типів транзакцій всього два.
 //Можна покласти або зняти гроші з рахунка
 const Transaction = {
-	DEPOSIT: "deposit",
-	WITHDRAW: "withdraw",
+  DEPOSIT: "deposit",
+  WITHDRAW: "withdraw",
 };
 
 //Кожна транзакція це об'єкт з властивостями id, type, amount
 const account = {
-	//поточний баланс рахунка
-	balance: 0,
+  //поточний баланс рахунка
+  balance: 0,
 
-	//Історія транзакцій
-	transactions: [],
+  //Історія транзакцій
+  transactions: [],
 
-	//Метод створює і повертає об'єкт транзакцій
-	//Приймає сумму і тип транзакцій
-	createTransaction(type, amount) {
-		return {
-			type,
-			amount,
-		};
-	},
-	//Метод відповідає за додавання сумми к балансу.
-	//Приймає сумму транзакціи.
-	//Визиває createTransaction для створення об'єкта транзакціи
-	//після чого додає його в історію транзакцій
-	deposit(amount) {
-		const transactionResult = this.createTransaction(Transaction.DEPOSIT, amount);
-		this.balance += amount;
-		this.transactions.push({ ...transactionResult, id: (this.transactions.length + 1).toString().padStart(4, "0") });
-		return `✔️👉💳Transaction was successful - deposit amount: ₩${amount}. Current balance: ₩${this.balance}`;
-	},
-	//Метод відповідає за зняття сумми з балансу.
-	//Приймає сумму транзакціи.
-	//Визиває createTransaction для створення об'єкта транзакціи
-	//після чого додає йогого в історю транзакцій
-	//Якщо amount більше ніж поточний баланс, виводимо повідомлення про те,
-	//що недостатньо коштів на рахунку
-	withdraw(amount) {
-		if (this.balance < amount) {
-			return `❌Transaction was unsuccessful - insufficient funds. Current balance: ₩${this.balance}`;
-		}
-		const transactionResult = this.createTransaction(Transaction.WITHDRAW, amount);
-		this.balance -= amount;
-		this.transactions.push({ ...transactionResult, id: (this.transactions.length + 1).toString().padStart(4, "0") });
-		return `✔️👈💳Transaction was successful - withdrawal amount: ₩${amount}. Current balance: ₩${this.balance}`;
-	},
-	//Метод повертає поточний баланс
-	getBalance() {
-		return `Your current balace: ₩${this.balance}`;
-	},
+  //Метод створює і повертає об'єкт транзакцій
+  //Приймає сумму і тип транзакцій
+  createTransaction(type, amount) {
+    return {
+      type,
+      amount,
+    };
+  },
+  //Метод відповідає за додавання сумми к балансу.
+  //Приймає сумму транзакціи.
+  //Визиває createTransaction для створення об'єкта транзакціи
+  //після чого додає його в історію транзакцій
+  deposit(amount) {
+    const transactionResult = this.createTransaction(
+      Transaction.DEPOSIT,
+      amount
+    );
+    this.balance += amount;
+    this.transactions.push({
+      ...transactionResult,
+      id: (this.transactions.length + 1).toString().padStart(4, "0"),
+    });
+    return `✔️👉💳Transaction was successful - deposit amount: ₩${amount}. Current balance: ₩${this.balance}`;
+  },
+  //Метод відповідає за зняття сумми з балансу.
+  //Приймає сумму транзакціи.
+  //Визиває createTransaction для створення об'єкта транзакціи
+  //після чого додає йогого в історю транзакцій
+  //Якщо amount більше ніж поточний баланс, виводимо повідомлення про те,
+  //що недостатньо коштів на рахунку
+  withdraw(amount) {
+    if (this.balance < amount) {
+      return `❌Transaction was unsuccessful - insufficient funds. Current balance: ₩${this.balance}`;
+    }
+    const transactionResult = this.createTransaction(
+      Transaction.WITHDRAW,
+      amount
+    );
+    this.balance -= amount;
+    this.transactions.push({
+      ...transactionResult,
+      id: (this.transactions.length + 1).toString().padStart(4, "0"),
+    });
+    return `✔️👈💳Transaction was successful - withdrawal amount: ₩${amount}. Current balance: ₩${this.balance}`;
+  },
+  //Метод повертає поточний баланс
+  getBalance() {
+    return `Your current balace: ₩${this.balance}`;
+  },
 
-	//Метод шукає і повертає об'єкт транзакціи по id
-	getTransactionDetails(id) {
-		// this.transactions.find(transaction => {
-		// 	if (transaction.id === id) {
-		// 		return `Transaction ID: ${transaction.id}. Transaction Type: ${transaction.type}. Transaction Amount: ${transaction.amount}`;
-		// 	}
-		// });
-		// this.transactions.find(transaction => transaction.id === id);
+  //Метод шукає і повертає об'єкт транзакціи по id
+  getTransactionDetails(id) {
+    // return this.transactions.find((transaction) => {
+    //   console.log(transaction.id);
+    //   console.log(id);
+    //   if (transaction.id === id) {
+    //     return `Transaction ID: ${transaction.id}. Transaction Type: ${transaction.type}. Transaction Amount: ${transaction.amount}`;
+    //   }
+    // });
+    // this.transactions.find((transaction) => transaction.id === id);
 
-		for (const transaction of this.transactions) {
-			if (transaction.id === id) {
-				return `Transaction ID: ${transaction.id}. Transaction Type: ${transaction.type}. Transaction Amount: ₩${transaction.amount}`;
-			}
-		}
-		return `❌Error: transaction not found. Please enter valid transaction ID`;
-	},
+    for (const transaction of this.transactions) {
+      if (transaction.id === id) {
+        return `Transaction ID: ${transaction.id}. Transaction Type: ${transaction.type}. Transaction Amount: ₩${transaction.amount}`;
+      }
+    }
+    return `❌Error: transaction not found. Please enter valid transaction ID`;
+  },
 };
 
 console.log(account.deposit(2000));
