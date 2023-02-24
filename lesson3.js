@@ -258,5 +258,10 @@ class Notes {
 
 	updatePriority(text, newPriority) {
 		const index = this.items.findIndex(item => item.text === text);
+
+		if (index >= 0) {
+			this.items[index].Priority = newPriority;
+		}
+		return this.items;
 	}
 }
