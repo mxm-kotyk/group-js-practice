@@ -138,3 +138,18 @@ let size = 50;
 //     }
     
 // }
+/*
+Завдання 6
+Натиснувши кнопку "Подвоювати", збільшити значення
+у кожному елементі списку у 2 рази
+*/
+
+const items = document.querySelectorAll('.listItem');
+
+const buttonEl = document.querySelector('#double');
+
+buttonEl.addEventListener('click', doubleValues);
+
+function doubleValues() {
+    items.forEach(item=> item.textContent *= 2)
+}
