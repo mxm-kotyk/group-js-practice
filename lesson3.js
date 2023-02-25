@@ -102,7 +102,7 @@ const users = [
 // Отримати масив об'єктів користувачей по кольору очей (поле eyeColor).
 // console.log(getUsersWithEyeColor(users, 'blue')); // [об'є'кт Moore Hensley, об'єкт Sharlene Bush, об'єкт Carey Barr]
 
-// // Отримати масив імен користувачів по полю (поле gender)
+// Отримати масив імен користувачів по полю (поле gender)
 // console.log(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
 
 // function getUsersWithGender(users, gend) {
@@ -133,7 +133,7 @@ const users = [
 // }
 
 // console.log(getSortedUniqueSkills(users));
-// // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
+// [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
 
 // Напишіть дві функції
 // letMeSeeYourName(callback) - питає ім'я користувача
@@ -200,10 +200,10 @@ const users = [
 // }
 // callAction(product.showPrice.bind(product));
 
-// //1. Напиши класс Client який створює об'єкт
-// //із властивостями login, email
-// //Об'яви приватні властивості #login #email,
-// //доступ до яких зроби через геттер и сеттер login email
+//1. Напиши класс Client який створює об'єкт
+//із властивостями login, email
+//Об'яви приватні властивості #login #email,
+//доступ до яких зроби через геттер и сеттер login email
 
 // class Client {
 //   #login;
@@ -239,25 +239,36 @@ const users = [
 //updatePriority(text, newPriority)
 
 class Notes {
-    static Priority = {
-        HIGHT: "hight",
-        MIDDLE: "middle",
-        LOW: "low"
-    }
-    constructor() {
-        this.items = [];
-    }
-    
-    addNote(note) {
-        this.items.push(note);
-    }
+  static Priority = {
+    HIGHT: "hight",
+    MIDDLE: "middle",
+    LOW: "low",
+  };
+  constructor() {
+    this.items = [];
+  }
 
-    removeNote(noteName) {
-        this.items = this.items.filter(item => item.text !== noteName)
-    }
+  addNote(note) {
+    this.items.push(note);
+  }
 
-    updatePriority(text, newPriority) {
-        const index = this.items.findIndex(item => item.text === text)
-        
+  removeNote(noteName) {
+    this.items = this.items.filter((item) => item.text !== noteName);
+  }
+
+  updatePriority(text, newPriority) {
+    const index = this.items.findIndex((item) => item.text === text);
+
+    if (index >= 0) {
+      this.items[index].priority = newPriority;
     }
+    return this.items;
+  }
 }
+
+const notesArray = new Notes();
+notesArray.addNote({ text: "hello", priority: Notes.Priority.LOW });
+notesArray.addNote({ text: "hello world", priority: Notes.Priority.MIDDLE });
+notesArray.removeNote("hello");
+notesArray.updatePriority("hello world", "hight");
+console.log(notesArray);
