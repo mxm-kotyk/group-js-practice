@@ -89,30 +89,52 @@ let size = 50;
 
 // document.body.append(squareEl, enlargeBtn, shrinkBtn);
 
-const markup = `<div style="background: red; width: ${size}px; height: ${size}px"></div> <button class="enlarge">Збільшити</button> <button class="shrink">Зменшити</button>`;
+// const markup = `<div style="background: red; width: ${size}px; height: ${size}px"></div> <button class="enlarge">Збільшити</button> <button class="shrink">Зменшити</button>`;
 
-document.body.insertAdjacentHTML("afterbegin", markup);
+// document.body.insertAdjacentHTML("afterbegin", markup);
 
-const enlargeBtn = document.querySelector(".enlarge");
-const shrinkBtn = document.querySelector(".shrink");
-const squareEl = document.querySelector("div");
+// const enlargeBtn = document.querySelector(".enlarge");
+// const shrinkBtn = document.querySelector(".shrink");
+// const squareEl = document.querySelector("div");
 
-enlargeBtn.addEventListener("click", enlargeOnClick);
+// enlargeBtn.addEventListener("click", enlargeOnClick);
 
-shrinkBtn.addEventListener("click", shrinkOnClick);
+// shrinkBtn.addEventListener("click", shrinkOnClick);
 
-function enlargeOnClick() {
-  size += 10;
-  changeSize(size);
-}
+// function enlargeOnClick() {
+//   size += 10;
+//   changeSize(size);
+// }
 
-function shrinkOnClick() {
-  if (size === 10) return;
-  size -= 10;
-  changeSize(size);
-}
+// function shrinkOnClick() {
+//   if (size === 10) return;
+//   size -= 10;
+//   changeSize(size);
+// }
 
-function changeSize(size) {
-  squareEl.style.height = `${size}px`;
-  squareEl.style.width = `${size}px`;
-}
+// function changeSize(size) {
+//   squareEl.style.height = `${size}px`;
+//   squareEl.style.width = `${size}px`;
+// }
+
+/*
+Завдання 3
+Кнопка "Приховати" ховає текст і замінює назву кнопки на
+"Розкрити", при повторному натисканні текст знову стає доступним
+і кнопка набуває початкового вигляду.
+*/
+// const inputEl = document.querySelector('#passwordInput');
+// const buttonEl = document.querySelector('#passwordButton');
+
+// buttonEl.addEventListener('click', changeEl);
+
+// function changeEl() {
+//     if (buttonEl.textContent === "Розкрити") {
+//         inputEl.style.color = 'inherit';
+//         buttonEl.textContent = "Приховати";
+//     } else {
+//         inputEl.style.color = 'transparent';
+//         buttonEl.textContent = "Розкрити";
+//     }
+    
+// }
