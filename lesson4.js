@@ -37,6 +37,8 @@
 
 // }
 
+// ==========================================================
+
 // Створити невелику гру
 // Спочатку на екрані з'являється якась фігура рандомного коліру в рандомному місті
 // Натискаючі на фігуру, вона змінює свою форму, колір, місце розташування
@@ -73,11 +75,16 @@
 
 // }
 
+// ==========================================================
+
 // Створити червоний квадрат розміром 50 на 50 рх
 // Додати кнопку "Зменшити", яка робить квадрат менше на 10 пікселів
 // Додати кнопку "Збільшити", яка робить його більше на 10 пікселів.
 
-let size = 50;
+// let size = 50;
+
+// Метод append
+
 // const squareEl = document.createElement("div");
 // changeSize(size);
 // squareEl.style.background = `red`;
@@ -88,6 +95,8 @@ let size = 50;
 // shrinkBtn.textContent = "Зменшити";
 
 // document.body.append(squareEl, enlargeBtn, shrinkBtn);
+
+// Метод insertAdjacentHTML
 
 // const markup = `<div style="background: red; width: ${size}px; height: ${size}px"></div> <button class="enlarge">Збільшити</button> <button class="shrink">Зменшити</button>`;
 
@@ -117,6 +126,8 @@ let size = 50;
 //   squareEl.style.width = `${size}px`;
 // }
 
+// ==========================================================
+
 /*
 Завдання 3
 Кнопка "Приховати" ховає текст і замінює назву кнопки на
@@ -136,20 +147,82 @@ let size = 50;
 //         inputEl.style.color = 'transparent';
 //         buttonEl.textContent = "Розкрити";
 //     }
-    
+
 // }
+
+// ==========================================================
+
 /*
 Завдання 6
 Натиснувши кнопку "Подвоювати", збільшити значення
 у кожному елементі списку у 2 рази
 */
 
-const items = document.querySelectorAll('.listItem');
+// const items = document.querySelectorAll('.listItem');
 
-const buttonEl = document.querySelector('#double');
+// const buttonEl = document.querySelector('#double');
 
-buttonEl.addEventListener('click', doubleValues);
+// buttonEl.addEventListener('click', doubleValues);
 
-function doubleValues() {
-    items.forEach(item=> item.textContent *= 2)
-}
+// function doubleValues() {
+//     items.forEach(item=> item.textContent *= 2)
+// }
+
+// ==========================================================
+
+/*
+Завдання 13
+Коло має зникати при наведенні на нього.
+При цьому позиція сусідніх кіл має залишатися незмінною.
+*/
+
+// const squareEls = document.querySelectorAll(".gridItem");
+
+// squareEls.forEach((square) => {
+//   square.addEventListener("mouseenter", () => {
+//     square.classList.add("hide");
+//   });
+//   square.addEventListener("mouseleave", () => {
+//     square.classList.remove("hide");
+//   });
+// });
+
+// ==========================================================
+
+// HOMEWORK:
+
+/*
+Завдання 2 (Див. розмітку в index.html)
+Після натискання кнопки "SWAP ME" здійснюється обмін вмістом між двома інпутами.
+Ви можете натиснути на неї кілька разів або вручну змінити вміст інпутів.
+*/
+
+// ==========================================================
+
+/*
+Завдання 7 (Див. розмітку в index.html і стилі в styles.css)
+При натисканні на коло він повинен слідувати за курсором.
+При повторному натисканні він стає в початкове положення.
+*/
+
+// ==========================================================
+
+/*
+Завдання 12 (Див. розмітку в index.html)
+Клік по кнопці замінює символ першого поля введення на
+символ з другого поля введення в усьому тексті.
+Якщо одне з полів порожнє, викликай alert із проханням заповнити їх.
+*/
+
+// ==========================================================
+
+// Завдання 14 (Див. розмітку в index.html і стилі в styles.css)
+// Написати функцію, яка буде створювати список подій клавіатури event.key та event.code
+// Додати класи на список eventList, на елементи eventCode та eventKey
+
+// ==========================================================
+
+/*
+Завдання 11 (Див. розмітку в index.html)
+Наведено список людей. Зроби фільтр на ім'я/прізвище.
+*/
