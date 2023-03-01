@@ -197,6 +197,19 @@
 Ви можете натиснути на неї кілька разів або вручну змінити вміст інпутів.
 */
 
+// const btnEl = document.querySelector('#swapButton');
+// const leftSwapInputEl = document.querySelector('#leftSwapInput');
+// const rightSwapInputEl = document.querySelector('#rightSwapInput');
+
+// const handleBtn = (e) => {
+//     const leftSwapValue = leftSwapInputEl.value;
+//     const rightSwapValue = rightSwapInputEl.value;
+//     leftSwapInputEl.value = rightSwapValue;
+//     rightSwapInputEl.value = leftSwapValue;
+// };
+
+// btnEl.addEventListener('click', handleBtn);
+
 // ==========================================================
 
 /*
@@ -213,6 +226,20 @@
 символ з другого поля введення в усьому тексті.
 Якщо одне з полів порожнє, викликай alert із проханням заповнити їх.
 */
+
+// const btnEl = document.querySelector('#replaceButton');
+// const textEl = document.querySelector('.text');
+// const inputFromEl = document.querySelector('#from');
+// const inputToEl = document.querySelector('#to');
+
+// const handleBtn = (e) => {
+//     if (inputFromEl.value === "" || inputToEl.value === "") alert('Заповни всі поля!');
+//     else {
+//         textEl.textContent = textEl.textContent.replaceAll(`${inputFromEl.value}`, `${inputToEl.value}`);
+//     }
+// }
+
+// btnEl.addEventListener('click', handleBtn);
 
 // ==========================================================
 

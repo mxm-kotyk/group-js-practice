@@ -30,7 +30,7 @@
 
 /* Завдання 7 стилі */
 
-/* .outerCircle,
+.outerCircle,
 .innerCircle {
     margin: 0;
     border-radius: 50%;
@@ -50,7 +50,7 @@
     width: 30px;
     height: 30px;
     background-color: red;
-} */
+}
 
 /* ========================================================== */
 
