@@ -197,6 +197,16 @@
 Ви можете натиснути на неї кілька разів або вручну змінити вміст інпутів.
 */
 
+// const leftInput = document.querySelector("#leftSwapInput");
+// const rightInput = document.querySelector("#rightSwapInput");
+// const swapButton = document.querySelector("#swapButton");
+
+// swapButton.addEventListener("click", () => {
+// 	const leftInputPrevValue = leftInput.value;
+// 	leftInput.value = rightInput.value;
+// 	rightInput.value = leftInputPrevValue;
+// });
+
 // ==========================================================
 
 /*
@@ -204,6 +214,36 @@
 При натисканні на коло він повинен слідувати за курсором.
 При повторному натисканні він стає в початкове положення.
 */
+
+// const outerCircle = document.querySelector(".outerCircle");
+// const innerCircle = document.querySelector(".innerCircle");
+
+// outerCircle.addEventListener("click", handleMovementOnClick);
+
+// function followCursor(e) {
+// 	e.currentTarget.style.position = "absolute";
+// 	e.currentTarget.style.transform = "translate(-50%,-50%)";
+// 	e.currentTarget.style.top = `${e.pageY}px`;
+// 	e.currentTarget.style.left = `${e.pageX}px`;
+// 	e.currentTarget.setAttribute("data-listener", "true");
+// }
+
+// function removeListenersOnClick(e) {
+// 	if (e.currentTarget.hasAttribute("data-listener")) {
+// 		e.currentTarget.style.position = "static";
+// 		e.currentTarget.style.transform = "translate(0%, 0%)";
+// 		e.currentTarget.removeEventListener("mousemove", followCursor);
+// 		e.currentTarget.removeEventListener("click", handleMovementOnClick);
+// 		e.currentTarget.removeAttribute("data-listener");
+// 	} else {
+// 		handleMovementOnClick(e);
+// 	}
+// }
+
+// function handleMovementOnClick(e) {
+// 	e.currentTarget.addEventListener("mousemove", followCursor);
+// 	e.currentTarget.addEventListener("click", removeListenersOnClick);
+// }
 
 // ==========================================================
 
@@ -213,6 +253,23 @@
 символ з другого поля введення в усьому тексті.
 Якщо одне з полів порожнє, викликай alert із проханням заповнити їх.
 */
+
+const refs = {
+	paragraph: document.querySelector(".text"),
+	inputFrom: document.querySelector("#from"),
+	inputTo: document.querySelector("#to"),
+	replaceBtn: document.querySelector("#replaceButton"),
+};
+
+refs.replaceBtn.addEventListener("click", handleReplaceCharOnClick);
+
+function handleReplaceCharOnClick() {
+	if (refs.paragraph.textContent.includes(refs.inputFrom.value)) {
+		console.log(refs.inputTo.value);
+		console.dir(refs.paragraph.textContent);
+		refs.paragraph.textContent = refs.paragraph.textContent.replaceAll(refs.inputFrom.value, refs.inputTo.value);
+	}
+}
 
 // ==========================================================
 
