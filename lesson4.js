@@ -254,22 +254,24 @@
 Якщо одне з полів порожнє, викликай alert із проханням заповнити їх.
 */
 
-const refs = {
-	paragraph: document.querySelector(".text"),
-	inputFrom: document.querySelector("#from"),
-	inputTo: document.querySelector("#to"),
-	replaceBtn: document.querySelector("#replaceButton"),
-};
+// const refs = {
+// 	paragraph: document.querySelector(".text"),
+// 	inputFrom: document.querySelector("#from"),
+// 	inputTo: document.querySelector("#to"),
+// 	replaceBtn: document.querySelector("#replaceButton"),
+// };
 
-refs.replaceBtn.addEventListener("click", handleReplaceCharOnClick);
+// refs.replaceBtn.addEventListener("click", handleReplaceCharOnClick);
 
-function handleReplaceCharOnClick() {
-	if (refs.paragraph.textContent.includes(refs.inputFrom.value)) {
-		console.log(refs.inputTo.value);
-		console.dir(refs.paragraph.textContent);
-		refs.paragraph.textContent = refs.paragraph.textContent.replaceAll(refs.inputFrom.value, refs.inputTo.value);
-	}
-}
+// function handleReplaceCharOnClick() {
+// 	if (refs.inputFrom.value === "" || refs.inputTo.value === "") {
+// 		return alert("Please fill in all the input fields");
+// 	} else if (refs.paragraph.textContent.includes(refs.inputFrom.value)) {
+// 		refs.paragraph.textContent = refs.paragraph.textContent.replaceAll(refs.inputFrom.value, refs.inputTo.value);
+// 	} else {
+// 		return alert("The entered character was not found in the text");
+// 	}
+// }
 
 // ==========================================================
 
@@ -277,9 +279,44 @@ function handleReplaceCharOnClick() {
 // Написати функцію, яка буде створювати список подій клавіатури event.key та event.code
 // Додати класи на список eventList, на елементи eventCode та eventKey
 
+// const eventThumb = document.querySelector(".eventThumb");
+
+// const eventList = document.createElement("ul");
+// eventList.classList.add("eventList");
+// eventThumb.append(eventList);
+
+// window.addEventListener("keydown", handleCardOnKeydown);
+
+// function handleCardOnKeydown(e) {
+// 	const eventItemMarkup = `
+// 	<li>
+// 		Pressed key: <span class="eventKey">${e.key}</span>
+// 		Code: <span class="eventCode">${e.code}</span>
+// 	</li>`;
+// 	eventList.insertAdjacentHTML("beforeend", eventItemMarkup);
+// }
+
 // ==========================================================
 
 /*
 Завдання 11 (Див. розмітку в index.html)
 Наведено список людей. Зроби фільтр на ім'я/прізвище.
 */
+
+// const filterInput = document.querySelector(".contactsFilter");
+// const contactsList = document.querySelector(".contacts");
+// const contactsListItems = document.querySelectorAll(".contact");
+
+// filterInput.addEventListener("input", handleSearchContactOnInput);
+
+// function handleSearchContactOnInput(e) {
+// 	const filterResult = contactsListItems.forEach(contact => {
+// 		if (contact.textContent.toLowerCase().includes(filterInput.value.toLowerCase())) {
+// 			const filteredContactsMarkup = `<li class="contact">${contact.textContent}</li>`;
+// 			contactsList.innerHTML = filteredContactsMarkup;
+// 		} else {
+// 			return;
+// 		}
+// 	});
+// 	return filterResult;
+// }
