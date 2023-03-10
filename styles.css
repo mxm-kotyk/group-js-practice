@@ -30,7 +30,7 @@
 
 /* Завдання 7 стилі */
 
-/* .outerCircle,
+.outerCircle,
 .innerCircle {
     margin: 0;
     border-radius: 50%;
@@ -50,13 +50,13 @@
     width: 30px;
     height: 30px;
     background-color: red;
-} */
+}
 
 /* ========================================================== */
 
 /* Завдання 14 стилі */
 
-/* .eventThumb {
+.eventThumb {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
@@ -77,4 +77,4 @@
 
 .eventCode {
     color: blueviolet;
-} */
+}

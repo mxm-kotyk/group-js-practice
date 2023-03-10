@@ -197,6 +197,19 @@
 Ви можете натиснути на неї кілька разів або вручну змінити вміст інпутів.
 */
 
+// const btnEl = document.querySelector('#swapButton');
+// const leftSwapInputEl = document.querySelector('#leftSwapInput');
+// const rightSwapInputEl = document.querySelector('#rightSwapInput');
+
+// const handleBtn = (e) => {
+//     const leftSwapValue = leftSwapInputEl.value;
+//     const rightSwapValue = rightSwapInputEl.value;
+//     leftSwapInputEl.value = rightSwapValue;
+//     rightSwapInputEl.value = leftSwapValue;
+// };
+
+// btnEl.addEventListener('click', handleBtn);
+
 // ==========================================================
 
 /*
@@ -204,6 +217,16 @@
 При натисканні на коло він повинен слідувати за курсором.
 При повторному натисканні він стає в початкове положення.
 */
+
+// const circleEl = document.querySelector('.outerCircle');
+// console.log(circleEl);
+
+// const handleCircleMove = e => {
+// }
+
+// circleEl.addEventListener('mousemove', handleCircleMove);
+
+// ПОТРІБНО ДОРОБИТИ
 
 // ==========================================================
 
@@ -214,11 +237,43 @@
 Якщо одне з полів порожнє, викликай alert із проханням заповнити їх.
 */
 
+// const btnEl = document.querySelector('#replaceButton');
+// const textEl = document.querySelector('.text');
+// const inputFromEl = document.querySelector('#from');
+// const inputToEl = document.querySelector('#to');
+
+// const handleBtn = (e) => {
+//     if (inputFromEl.value === "" || inputToEl.value === "") alert('Заповни всі поля!');
+//     else {
+//         textEl.textContent = textEl.textContent.replaceAll(`${inputFromEl.value}`, `${inputToEl.value}`);
+//     }
+// }
+
+// btnEl.addEventListener('click', handleBtn);
+
 // ==========================================================
 
 // Завдання 14 (Див. розмітку в index.html і стилі в styles.css)
 // Написати функцію, яка буде створювати список подій клавіатури event.key та event.code
 // Додати класи на список eventList, на елементи eventCode та eventKey
+
+// const thumbEl = document.querySelector('.eventThumb');
+// const eventList = document.createElement('ul');
+// eventList.classList.add('eventList')
+// thumbEl.append(eventList);
+
+// const handleKeyboardClick = (e) => {
+//     const keyItem = document.createElement('li');
+//     const codeItem = document.createElement('li');
+//     eventList.append(keyItem);
+//     eventList.append(codeItem);
+//     keyItem.textContent = e.key;
+//     codeItem.textContent = e.code;
+//     keyItem.classList.add('eventKey');
+//     codeItem.classList.add('eventCode');
+// }
+
+// document.addEventListener('keydown', handleKeyboardClick)
 
 // ==========================================================
 
@@ -226,3 +281,20 @@
 Завдання 11 (Див. розмітку в index.html)
 Наведено список людей. Зроби фільтр на ім'я/прізвище.
 */
+
+// const inputEl = document.querySelector('.contactsFilter');
+// const contactsList = document.querySelector('.contacts');
+// const contactsItem = document.querySelectorAll('.contact');
+// const handleTextInput = (e) => {
+//     const inputQuery = inputEl.value.toLowerCase().trim();
+//     contactsItem.forEach((item) => {
+//         const name = item.textContent.toLowerCase();
+//         if (name === inputQuery) {
+//             contactsList.innerHTML = `<li class="contact">${item.textContent}</li>`;
+//         } else return;
+//     });
+// }
+
+// inputEl.addEventListener('input', handleTextInput)
+
+// // ПОТРІБНО ДОРОБИТИ
