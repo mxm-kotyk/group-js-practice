@@ -218,6 +218,14 @@
 При повторному натисканні він стає в початкове положення.
 */
 
+// const circleEl = document.querySelector('.outerCircle');
+// console.log(circleEl);
+
+// const handleCircleMove = e => {
+// }
+
+// circleEl.addEventListener('mousemove', handleCircleMove);
+
 // ==========================================================
 
 /*
@@ -247,9 +255,43 @@
 // Написати функцію, яка буде створювати список подій клавіатури event.key та event.code
 // Додати класи на список eventList, на елементи eventCode та eventKey
 
+// const thumbEl = document.querySelector('.eventThumb');
+// const eventList = document.createElement('ul');
+// eventList.classList.add('eventList')
+// thumbEl.append(eventList);
+
+// const handleKeyboardClick = (e) => {
+//     const keyItem = document.createElement('li');
+//     const codeItem = document.createElement('li');
+//     eventList.append(keyItem);
+//     eventList.append(codeItem);
+//     keyItem.textContent = e.key;
+//     codeItem.textContent = e.code;
+//     keyItem.classList.add('eventKey');
+//     codeItem.classList.add('eventCode');
+// }
+
+// document.addEventListener('keydown', handleKeyboardClick)
+
 // ==========================================================
 
 /*
 Завдання 11 (Див. розмітку в index.html)
 Наведено список людей. Зроби фільтр на ім'я/прізвище.
 */
+
+const inputEl = document.querySelector('.contactsFilter');
+const contactsList = document.querySelector('.contacts');
+const contactsItem = document.querySelectorAll('.contact');
+console.log(contactsList.textContent);
+const handleTextInput = (e) => {
+    const inputQuery = inputEl.value.toLowerCase().trim();
+    contactsItem.forEach((item) => {
+        const name = item.textContent.toLowerCase();
+        if (name === inputQuery) {
+            contactsList.innerHTML = `<li class="contact">${item.textContent}</li>`;
+        } else return;
+    })
+}
+
+inputEl.addEventListener('input', handleTextInput)

@@ -56,7 +56,7 @@
 
 /* Завдання 14 стилі */
 
-/* .eventThumb {
+.eventThumb {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
@@ -77,4 +77,4 @@
 
 .eventCode {
     color: blueviolet;
-} */
+}
