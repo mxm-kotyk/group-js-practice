@@ -226,6 +226,8 @@
 
 // circleEl.addEventListener('mousemove', handleCircleMove);
 
+// ПОТРІБНО ДОРОБИТИ
+
 // ==========================================================
 
 /*
@@ -280,18 +282,19 @@
 Наведено список людей. Зроби фільтр на ім'я/прізвище.
 */
 
-const inputEl = document.querySelector('.contactsFilter');
-const contactsList = document.querySelector('.contacts');
-const contactsItem = document.querySelectorAll('.contact');
-console.log(contactsList.textContent);
-const handleTextInput = (e) => {
-    const inputQuery = inputEl.value.toLowerCase().trim();
-    contactsItem.forEach((item) => {
-        const name = item.textContent.toLowerCase();
-        if (name === inputQuery) {
-            contactsList.innerHTML = `<li class="contact">${item.textContent}</li>`;
-        } else return;
-    })
-}
+// const inputEl = document.querySelector('.contactsFilter');
+// const contactsList = document.querySelector('.contacts');
+// const contactsItem = document.querySelectorAll('.contact');
+// const handleTextInput = (e) => {
+//     const inputQuery = inputEl.value.toLowerCase().trim();
+//     contactsItem.forEach((item) => {
+//         const name = item.textContent.toLowerCase();
+//         if (name === inputQuery) {
+//             contactsList.innerHTML = `<li class="contact">${item.textContent}</li>`;
+//         } else return;
+//     });
+// }
 
-inputEl.addEventListener('input', handleTextInput)
+// inputEl.addEventListener('input', handleTextInput)
+
+// // ПОТРІБНО ДОРОБИТИ
