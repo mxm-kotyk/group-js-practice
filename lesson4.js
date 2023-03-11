@@ -310,13 +310,12 @@
 // filterInput.addEventListener("input", handleSearchContactOnInput);
 
 // function handleSearchContactOnInput(e) {
-// 	const filterResult = contactsListItems.forEach(contact => {
-// 		if (contact.textContent.toLowerCase().includes(filterInput.value.toLowerCase())) {
-// 			const filteredContactsMarkup = `<li class="contact">${contact.textContent}</li>`;
-// 			contactsList.innerHTML = filteredContactsMarkup;
-// 		} else {
-// 			return;
-// 		}
-// 	});
-// 	return filterResult;
+//   const filterResult = [...contactsListItems].filter((contact) =>
+//     contact.textContent.toLowerCase().includes(filterInput.value.toLowerCase())
+//   );
+//   const filteredMarkup = filterResult
+//     .map((item) => `<li>${item.textContent}</li>`)
+//     .join("");
+//   contactsList.innerHTML = "";
+//   contactsList.insertAdjacentHTML("afterbegin", filteredMarkup);
 // }
